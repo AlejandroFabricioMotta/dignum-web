@@ -144,10 +144,14 @@
       <h2>Pensemos juntos tu organización mixta.</h2>
       <p class="intro" style="margin-bottom:32px">Si estás por incorporar IA en tu empresa, o ya lo hiciste y te quedó la duda de qué pasa con tu gente, escribinos. Estamos en los comienzos y buscamos a las primeras organizaciones que quieran recorrer este camino con tiempo y con cuidado. Leemos cada mensaje y respondemos personalmente.</p>
       <form id="contacto" onsubmit="return enviar(event)">
-        <label>Nombre<input type="text" name="nombre" required></label>
-        <label>Correo electrónico<input type="email" name="correo" required></label>
+        <input type="hidden" name="access_key" value="76114e10-3314-43fb-947f-5a80c8a241cf">
+        <input type="hidden" name="subject" value="Nuevo mensaje desde dignum-llc.com">
+        <input type="hidden" name="from_name" value="Web de Dignum">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+        <label>Nombre<input type="text" name="name" required></label>
+        <label>Correo electrónico<input type="email" name="email" required></label>
         <label>Organización y país (opcional)<input type="text" name="organizacion"></label>
-        <label>¿Qué te gustaría conversar?<textarea name="mensaje" required></textarea></label>
+        <label>¿Qué te gustaría conversar?<textarea name="message" required></textarea></label>
         <label class="check"><input type="checkbox" name="acepto" required> Acepto que Dignum use estos datos para responderme.</label>
         <button class="btn solido" type="submit">Enviar mensaje</button>
         <p class="aviso" id="aviso" role="status"></p>
@@ -170,12 +174,32 @@
 </footer>
 
 <script>
-// El formulario todavía no está conectado a un servicio de envío.
-// Más adelante lo conectamos; por ahora avisa con honestidad.
+// Envío del formulario mediante Web3Forms (la clave es pública por diseño).
 function enviar(e){
   e.preventDefault();
-  document.getElementById('aviso').textContent =
-    'El formulario todavía está en construcción. Por ahora, escribinos por WhatsApp.';
+  var f = document.getElementById('contacto');
+  var aviso = document.getElementById('aviso');
+  var btn = f.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  aviso.textContent = 'Enviando…';
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(Object.fromEntries(new FormData(f)))
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(d){
+    if (d.success) {
+      aviso.textContent = 'Gracias. Recibimos tu mensaje y te responderemos personalmente.';
+      f.reset();
+    } else {
+      aviso.textContent = 'No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.';
+    }
+  })
+  .catch(function(){
+    aviso.textContent = 'No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.';
+  })
+  .then(function(){ btn.disabled = false; });
   return false;
 }
 </script>
