@@ -48,6 +48,7 @@ h2{font-size:clamp(34px,4.4vw,52px);margin-bottom:24px}
 section.oscura .intro{color:var(--salvia)}
 .tres{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .tarjeta{background:var(--blanco);border:1px solid var(--borde);border-radius:16px;padding:32px}
+.tarjeta img{height:auto !important}
 .tarjeta h3{font-size:26px;margin-bottom:12px}
 .tarjeta p{color:var(--piedra);font-size:17px}
 .tarjeta .n{font-family:'Fraunces',Georgia,serif;color:var(--brasa);font-size:36px;margin-bottom:8px}
