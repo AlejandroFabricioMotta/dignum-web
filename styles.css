@@ -101,3 +101,15 @@ footer .wrap::after{content:"Austin - Texas";order:2;font-size:14px;padding-left
   section{padding:64px 0}
   footer .wrap>span:first-child,footer .wrap>span:last-child{flex:1 1 100%;text-align:left}
 }
+
+/* Soluciones concretas (Qué hacemos) */
+.sol-grupo{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:22px;color:var(--salvia);margin:40px 0 16px;padding-top:16px;border-top:1px solid var(--piedra)}
+.sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.tarjeta.sol{padding:24px}
+.tarjeta.sol h3{font-size:22px;margin-bottom:10px}
+.tarjeta.sol p{font-size:16px}
+.sol-cierre{margin-top:48px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.sol-cierre p{font-family:'Fraunces',Georgia,serif;font-size:26px;line-height:1.2}
+.oscura .sol-cierre .btn{background:var(--brasa);border-color:var(--brasa);color:var(--abeto)}
+.oscura .sol-cierre .btn:hover{background:var(--hueso);border-color:var(--hueso)}
+.caso-nota{margin-top:32px;font-size:15px;color:var(--piedra);max-width:760px}
