@@ -113,3 +113,8 @@ footer .wrap::after{content:"Austin - Texas";order:2;font-size:14px;padding-left
 .oscura .sol-cierre .btn{background:var(--brasa);border-color:var(--brasa);color:var(--abeto)}
 .oscura .sol-cierre .btn:hover{background:var(--hueso);border-color:var(--hueso)}
 .caso-nota{margin-top:32px;font-size:15px;color:var(--piedra);max-width:760px}
+
+/* Símbolos de las soluciones concretas */
+.sol-cab{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:10px}
+.sol-cab h3{margin:0}
+.tarjeta.sol .sol-cab img.sol-ico{flex:none;display:block;aspect-ratio:auto !important;height:auto;object-fit:contain;margin:0}
