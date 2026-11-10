@@ -151,6 +151,9 @@ footer .wrap::after{content:"Funes - Argentina"}
 .fundador-foto{margin:0;position:sticky;top:96px}
 .fundador-foto img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:16px}
 .fundador-foto .firma{margin-top:16px;display:flex;flex-direction:column;gap:3px}
+.fundador-foto .firma .nombre{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.fundador-foto .firma a.web{font-family:'Inter',system-ui,sans-serif;font-size:11px;font-weight:600;line-height:1;letter-spacing:.04em;padding:5px 11px;border-radius:999px;background:var(--brasa);color:var(--abeto);text-decoration:none;transition:.15s}
+.fundador-foto .firma a.web:hover,.fundador-foto .firma a.web:focus-visible{background:var(--brasa-texto);color:#fff}
 .fundador-foto .firma strong{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:500;color:var(--abeto);line-height:1.2}
 .fundador-foto .firma span{font-size:13px;color:var(--piedra);line-height:1.45}
 @media(max-width:820px){.fundador{grid-template-columns:1fr;gap:32px}.fundador-foto{position:static;order:-1;max-width:360px}}
