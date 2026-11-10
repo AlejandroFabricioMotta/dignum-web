@@ -36,7 +36,7 @@
       <h1>Personas e IA, con dignidad.</h1>
       <p class="bajada">Ayudamos a las organizaciones a incorporar agentes de IA sin que nadie pierda su lugar, y a preservar la experiencia de quienes ya recorrieron el camino.</p>
       <div class="botones">
-        <a class="btn solido" href="#filosofia">Conocé nuestra filosofía</a>
+        <a class="btn solido" href="#filosofia">Conoce nuestra filosofía</a>
         <a class="btn borde" href="#conversemos">Conversemos</a>
       </div>
     </div>
@@ -253,7 +253,7 @@
     <div>
       <p class="eyebrow">Conversemos</p>
       <h2>Pensemos juntos tu organización mixta.</h2>
-      <p class="intro" style="margin-bottom:32px">Si estás por incorporar IA en tu empresa, o ya lo hiciste y te quedó la duda de qué pasa con tu gente, escribinos. Estamos en los comienzos y buscamos a las primeras organizaciones que quieran recorrer este camino con tiempo y con cuidado. Leemos cada mensaje y respondemos personalmente.</p>
+      <p class="intro" style="margin-bottom:32px">Si estás por incorporar IA en tu empresa, o ya lo hiciste y te quedó la duda de qué pasa con tu gente, escríbenos. Estamos en los comienzos y buscamos a las primeras organizaciones que quieran recorrer este camino con tiempo y con cuidado. Leemos cada mensaje y respondemos personalmente.</p>
       <form id="contacto" onsubmit="return enviar(event)">
         <input type="hidden" name="access_key" value="76114e10-3314-43fb-947f-5a80c8a241cf">
         <input type="hidden" name="subject" value="Nuevo mensaje desde dignum-llc.com">
@@ -269,8 +269,8 @@
       </form>
     </div>
     <aside class="wa">
-      <h3>¿Preferís WhatsApp?</h3>
-      <p>También podés escribirnos directamente al +1 954 658 4206.</p>
+      <h3>¿Prefieres WhatsApp?</h3>
+      <p>También puedes escribirnos directamente al +1 954 658 4206.</p>
       <a class="btn" href="https://wa.me/19546584206" target="_blank" rel="noopener">Escribir por WhatsApp</a>
     </aside>
   </div>
@@ -304,11 +304,11 @@ function enviar(e){
       aviso.textContent = 'Gracias. Recibimos tu mensaje y te responderemos personalmente.';
       f.reset();
     } else {
-      aviso.textContent = 'No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.';
+      aviso.textContent = 'No pudimos enviar el mensaje. Inténtalo de nuevo o escríbenos por WhatsApp.';
     }
   })
   .catch(function(){
-    aviso.textContent = 'No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.';
+    aviso.textContent = 'No pudimos enviar el mensaje. Inténtalo de nuevo o escríbenos por WhatsApp.';
   })
   .then(function(){ btn.disabled = false; });
   return false;
