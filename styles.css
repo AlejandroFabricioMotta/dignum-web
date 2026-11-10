@@ -142,3 +142,15 @@ footer .wrap::after{content:"Funes - Argentina"}
 }
 @media(max-width:900px){.marca svg{width:30px;height:30px}.marca{font-size:20px}.menu .btn{padding:7px 10px;font-size:12.5px}}
 .paso,.paso *{min-width:0;overflow-wrap:anywhere}
+
+/* Palabras de Fundador */
+.fundador{display:grid;grid-template-columns:1.45fr 1fr;gap:64px;align-items:start;margin:8px 0 80px}
+.fundador-texto p{font-size:18px;line-height:1.7;margin-bottom:18px;max-width:640px}
+.fundador-texto .etiqueta-fundador{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brasa-texto);margin-bottom:20px}
+.fundador-texto .apertura{font-family:'Fraunces',Georgia,serif;font-size:30px;line-height:1.25;color:var(--abeto);border-left:4px solid var(--brasa);padding-left:20px;margin-bottom:24px}
+.fundador-foto{margin:0;position:sticky;top:96px}
+.fundador-foto img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:16px}
+.fundador-foto .firma{margin-top:16px;display:flex;flex-direction:column;gap:3px}
+.fundador-foto .firma strong{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:500;color:var(--abeto);line-height:1.2}
+.fundador-foto .firma span{font-size:13px;color:var(--piedra);line-height:1.45}
+@media(max-width:820px){.fundador{grid-template-columns:1fr;gap:32px}.fundador-foto{position:static;order:-1;max-width:360px}}
