@@ -157,7 +157,3 @@ footer .wrap::after{content:"Funes - Argentina"}
 .fundador-foto .firma strong{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:500;color:var(--abeto);line-height:1.2}
 .fundador-foto .firma span{font-size:13px;color:var(--piedra);line-height:1.45}
 @media(max-width:820px){.fundador{grid-template-columns:1fr;gap:32px}.fundador-foto{position:static;order:-1;max-width:360px}}
-
-/* Botón superior "Conversemos": amarillo (prueba) */
-.menu .btn.solido{background:#FFD43B;border-color:#FFD43B;color:var(--abeto)}
-.menu .btn.solido:hover{background:#F2C200;border-color:#F2C200;color:var(--abeto)}
